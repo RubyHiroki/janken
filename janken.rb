@@ -2,7 +2,7 @@ require 'dxruby'
 # ウィンドウの大きさ
 Window.width=470
 Window.height=470
-
+$font = Font.new(32)
 # 背景画像読み込み
 image = Image.load('image/syogi.jpg')
 # ユーザー画像読み込み
@@ -30,10 +30,17 @@ Window.loop do
 
 # じゃんけんをするクラス
 # 1がぐー、２がちょき、３がぱーという処理を書く
+class Game
+  def janken
+    Window.draw_font(100, 100, "じゃんけんで勝負！", $font)
+    
+  end
+end
 
 
 
-
-
+game = Game.new
+game.janken
 
 end
+
