@@ -3,7 +3,6 @@ require 'dxruby'
 Window.width=470
 Window.height=470
 
-<<<<<<< .mine
 # 背景画像読み込み
 image = Image.load('image/syogi.jpg')
 # ユーザー画像読み込み
