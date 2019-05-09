@@ -18,4 +18,22 @@ Window.loop do
   Window.drawScale(-220, 10, user_image, 0.2, 0.2)
 # 敵画像出力
   Window.drawScale(290, 230, admin_image, 0.65, 0.65)
+
+# hpクラス
+# hpはテキスト表示でじゃんけんに負けたほうのhpを減らす処理を書く
+
+
+
+
+
+
+
+# じゃんけんをするクラス
+# 1がぐー、２がちょき、３がぱーという処理を書く
+
+
+
+
+
+
 end
