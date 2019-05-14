@@ -26,10 +26,5 @@ Window.loop do
 
 
 
-
-
-
-
-
 end
 
