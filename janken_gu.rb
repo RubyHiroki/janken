@@ -50,4 +50,14 @@ Window.loop do
   Window.drawScale(290, 230, admin_image, 0.65, 0.65)
   # 文字出力
   Window.draw_font(150, 100, "ぽん！！！！！", font)
+  
+  # じゃんけんの結果表示
+  case admin_select.image
+  when tyoki1.image
+    Window.draw_font(150, 150, "あなたの勝ち！", font)
+  when pa1.image
+    Window.draw_font(150, 150, "あなたの負け！", font)
+  else
+    Window.draw_font(150, 150, "あいこ！", font)
+  end
 end
