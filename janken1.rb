@@ -17,11 +17,20 @@ gu = Sprite.new(40, 230, Image.load('image/gu-.jpg'))
 # チョキの画像読み込みと位置
 tyoki = Sprite.new(40, 310, Image.load('image/tyoki.jpg'))
 
+# 敵パーの画像読み込みと位置
+pa1 = Sprite.new(130, 114, Image.load('image/pa-1.jpg'))
+# 敵グーの画像読み込みと位置
+gu1 = Sprite.new(130, 194, Image.load('image/gu-1.jpg'))
+# 敵チョキの画像読み込みと位置
+tyoki1 = Sprite.new(130, 274, Image.load('image/tyoki-1.jpg'))
+
 # パー,グー,チョキを一番前面に表示
 pa.z = 999
 gu.z = 998
 tyoki.z = 997
-
+pa1.z = 996
+gu1.z = 995
+tyoki1.z = 994
 
 Window.loop do
   # 画像の準備
@@ -37,7 +46,18 @@ Window.loop do
   tyoki.draw
   tyoki.scale_x=0.2
   tyoki.scale_y=0.2
-  
+  # 敵パーの大きさ
+  pa1.draw
+  pa1.scale_x=0.155
+  pa1.scale_y=0.155
+  # 敵グーの大きさ
+  gu1.draw
+  gu1.scale_x=0.155
+  gu1.scale_y=0.155
+  # 敵チョキの大きさ
+  tyoki1.draw
+  tyoki1.scale_x=0.155
+  tyoki1.scale_y=0.155
 # 背景画像出力
   Window.drawScale(100, 100, image, 2.5, 2.5)
 # ユーザー画像出力

@@ -13,6 +13,20 @@ admin_image = Image.load('image/admin.jpg')
 # チョキの画像読み込みと位置
 tyoki = Sprite.new(40, 310, Image.load('image/tyoki.jpg'))
 
+# 敵パーの画像読み込みと位置
+pa1 = Sprite.new(130, 114, Image.load('image/pa-1.jpg'))
+# 敵グーの画像読み込みと位置
+gu1 = Sprite.new(130, 194, Image.load('image/gu-1.jpg'))
+# 敵チョキの画像読み込みと位置
+tyoki1 = Sprite.new(130, 274, Image.load('image/tyoki-1.jpg'))
+
+# 配列に敵の一手を入れる
+admin_selects = pa1, gu1, tyoki1
+# 配列から一手をランダムに取ってくる
+admin_select = admin_selects.sample
+# 敵に一手を前面表示
+admin_select.z = 998
+
 # パー,グー,チョキを一番前面に表示
 tyoki.z = 997
 
@@ -23,10 +37,17 @@ Window.loop do
   tyoki.scale_x=0.2
   tyoki.scale_y=0.2
   
+  # 敵の一手の大きさ
+  admin_select.draw
+  admin_select.scale_x=0.155
+  admin_select.scale_y=0.155
+  
 # 背景画像出力
   Window.drawScale(100, 100, image, 2.5, 2.5)
 # ユーザー画像出力
   Window.drawScale(-220, 10, user_image, 0.2, 0.2)
 # 敵画像出力
   Window.drawScale(290, 230, admin_image, 0.65, 0.65)
+  # 文字出力
+  Window.draw_font(150, 100, "ぽん！！！！！", font)
 end
