@@ -1,8 +1,6 @@
+# 1ページ目の画面
 require 'dxruby'
 require 'scene_switcher'
-
-
-
 
 font = Font.new(24)
 

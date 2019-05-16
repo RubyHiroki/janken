@@ -1,5 +1,6 @@
-# 2ページ目
+# パーを出した場合の画面
 require 'dxruby'
+require 'scene_switcher'
 
 font = Font.new(24)
 
@@ -9,19 +10,23 @@ image = Image.load('image/syogi.jpg')
 user_image = Image.load('image/user.jpg')
 # 敵画像読み込み
 admin_image = Image.load('image/admin.jpg')
+# パーの画像読み込みと位置
+pa = Sprite.new(40, 150, Image.load('image/pa-.jpg'))
 
-# ここからゲームの処理
+# パーを一番前面に表示
+pa.z = 999
+
 Window.loop do
+  # 画像の準備
+  # パーの大きさ
+  pa.draw
+  pa.scale_x=0.2
+  pa.scale_y=0.2
+  
 # 背景画像出力
   Window.drawScale(100, 100, image, 2.5, 2.5)
 # ユーザー画像出力
   Window.drawScale(-220, 10, user_image, 0.2, 0.2)
 # 敵画像出力
   Window.drawScale(290, 230, admin_image, 0.65, 0.65)
-
-  Window.draw_font(100, 100, "じゃんけんで勝負！！\nspaceキーでスタート！！", font)
-  if Input.key_push?(K_SPACE)
-    switch_to "janken1.rb"
-  end
 end
-

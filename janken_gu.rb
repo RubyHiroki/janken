@@ -1,5 +1,6 @@
-# 2ページ目
+# グーの画面
 require 'dxruby'
+require 'scene_switcher'
 
 font = Font.new(24)
 
@@ -9,19 +10,23 @@ image = Image.load('image/syogi.jpg')
 user_image = Image.load('image/user.jpg')
 # 敵画像読み込み
 admin_image = Image.load('image/admin.jpg')
+# グーの画像読み込みと位置
+gu = Sprite.new(40, 230, Image.load('image/gu-.jpg'))
 
-# ここからゲームの処理
+# グーを一番前面に表示
+gu.z = 998
+
 Window.loop do
+  # 画像の準備
+  # グーの大きさ
+   gu.draw
+   gu.scale_x=0.2
+   gu.scale_y=0.2
+  
 # 背景画像出力
   Window.drawScale(100, 100, image, 2.5, 2.5)
 # ユーザー画像出力
   Window.drawScale(-220, 10, user_image, 0.2, 0.2)
 # 敵画像出力
   Window.drawScale(290, 230, admin_image, 0.65, 0.65)
-
-  Window.draw_font(100, 100, "じゃんけんで勝負！！\nspaceキーでスタート！！", font)
-  if Input.key_push?(K_SPACE)
-    switch_to "janken1.rb"
-  end
 end
-
