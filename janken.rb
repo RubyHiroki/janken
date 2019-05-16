@@ -1,6 +1,6 @@
 # 2ページ目
 require 'dxruby'
-
+require 'scene_switcher'
 font = Font.new(24)
 
 # 背景画像読み込み
