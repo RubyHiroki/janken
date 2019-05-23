@@ -53,12 +53,12 @@ Window.loop do
   
   # じゃんけんの結果表示
   case admin_select.image
-    when gu1.image
-      Window.draw_font(150, 100, "あなたの勝ち！", font, color:[0, 255, 127])
     when tyoki1.image
+      Window.draw_font(150, 100, "あなたの勝ち！", font, color:[0, 255, 127])
+    when pa1.image
       Window.draw_font(150, 100, "あなたの負け！", font, color:[0, 199, 255])
     else
-      Window.draw_font(180, 100, "あいこ！", font, color:[255, 215, 0])
+      Window.draw_font(150, 100, "あいこ！", font, color:[255, 215, 0])
   end
   Window.draw_font(150, 180, "SPACEキーでもう一回\nEscキーで終了", font, color:[255, 245, 238])
   if Input.key_push?(K_SPACE)
