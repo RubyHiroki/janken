@@ -49,17 +49,18 @@ Window.loop do
 # 敵画像出力
   Window.drawScale(290, 230, admin_image, 0.65, 0.65)
   # 文字出力
-  Window.draw_font(150, 50, "ぽん！！！！！", font)
+  Window.draw_font(150, 50, "ぽん！！！！！", font, color:[192, 255, 0])
 
   # じゃんけんの結果表示
   case admin_select.image
-    when pa1.image
-      Window.draw_font(150, 100, "あなたの勝ち！\n\nSPACEキーでもう一回\nEscキーで終了", font)
     when gu1.image
-      Window.draw_font(150, 100, "あなたの負け！\n\nSPACEキーでもう一回\nEscキーで終了", font)
+      Window.draw_font(150, 100, "あなたの勝ち！", font, color:[0, 255, 127])
+    when tyoki1.image
+      Window.draw_font(150, 100, "あなたの負け！", font, color:[0, 199, 255])
     else
-      Window.draw_font(150, 100, "あいこ！\n\nSPACEキーでもう一回\nEscキーで終了", font)
+      Window.draw_font(180, 100, "あいこ！", font, color:[255, 215, 0])
   end
+  Window.draw_font(150, 180, "SPACEキーでもう一回\nEscキーで終了", font, color:[255, 245, 238])
   if Input.key_push?(K_SPACE)
     switch_to "janken1.rb"
   elsif Input.key_push?(K_ESCAPE)

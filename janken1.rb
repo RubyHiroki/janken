@@ -65,7 +65,10 @@ Window.loop do
 # 敵画像出力
   Window.drawScale(290, 230, admin_image, 0.65, 0.65)
 
-  Window.draw_font(170, 100, "1:パー\n2:グー\n3:チョキ\n\nじゃんけん！！", font)
+  Window.draw_font(170, 100, "1:パー", font, color:[97, 235, 255])
+  Window.draw_font(170, 125, "2:グー", font, color:[238, 9, 17])
+  Window.draw_font(170, 150, "3:チョキ", font, color:[245, 255, 33])
+  Window.draw_font(170, 200, "じゃんけん！！", font, color:[192, 255, 0])
   # パーの画面に遷移
   if Input.key_push?(K_1)
     switch_to "janken_pa.rb"
