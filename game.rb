@@ -1,4 +1,4 @@
-# 環境準備
+ # 環境準備
 require 'dxruby'
 require 'scene_switcher'
 

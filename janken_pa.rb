@@ -5,7 +5,7 @@ require 'scene_switcher'
 font = Font.new(24)
 
 # 背景画像読み込み
-image = Image.load('image/syogi.jpg')
+image = Image.load('image/syogi.jpg') 
 # ユーザー画像読み込み
 user_image = Image.load('image/user.jpg')
 # 敵画像読み込み
